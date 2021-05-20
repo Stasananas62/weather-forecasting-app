@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* BudgetTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BudgetTrackerTests.m */; };
-		0664E89972BC6E8A78579F0F /* libPods-BudgetTracker-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1683E4DC51CBB45CA75C44C0 /* libPods-BudgetTracker-tvOSTests.a */; };
+		00E356F31AD99517003FC87E /* WeatherForecastingAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* WeatherForecastingAppTests.m */; };
+		0664E89972BC6E8A78579F0F /* libPods-WeatherForecastingApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1683E4DC51CBB45CA75C44C0 /* libPods-WeatherForecastingApp-tvOSTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* BudgetTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BudgetTrackerTests.m */; };
+		2DCD954D1E0B4F2C00145EB5 /* WeatherForecastingAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* WeatherForecastingAppTests.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		C6D6EE95F718730915A6EE39 /* libPods-BudgetTracker-BudgetTrackerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C80C0EDD9DB44F3835F2ED0 /* libPods-BudgetTracker-BudgetTrackerTests.a */; };
-		E6B4E8BDFB163891467462B8 /* libPods-BudgetTracker-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C663A32E9990E9F66D337293 /* libPods-BudgetTracker-tvOS.a */; };
-		EDEE9FA14459E3F61D0BF72B /* libPods-BudgetTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4368937257899934F20CEB75 /* libPods-BudgetTracker.a */; };
+		C6D6EE95F718730915A6EE39 /* libPods-WeatherForecastingApp-WeatherForecastingAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C80C0EDD9DB44F3835F2ED0 /* libPods-WeatherForecastingApp-WeatherForecastingAppTests.a */; };
+		E6B4E8BDFB163891467462B8 /* libPods-WeatherForecastingApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C663A32E9990E9F66D337293 /* libPods-WeatherForecastingApp-tvOS.a */; };
+		EDEE9FA14459E3F61D0BF72B /* libPods-WeatherForecastingApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4368937257899934F20CEB75 /* libPods-WeatherForecastingApp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,36 +28,36 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = BudgetTracker;
+			remoteInfo = WeatherForecastingApp;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "BudgetTracker-tvOS";
+			remoteInfo = "WeatherForecastingApp-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* BudgetTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BudgetTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* WeatherForecastingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherForecastingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* BudgetTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BudgetTrackerTests.m; sourceTree = "<group>"; };
-		130D80E05A3765B5127793E2 /* Pods-BudgetTracker-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudgetTracker-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-BudgetTracker-tvOSTests/Pods-BudgetTracker-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		136DF393FA5AD90BCF461AA4 /* Pods-BudgetTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudgetTracker.debug.xcconfig"; path = "Target Support Files/Pods-BudgetTracker/Pods-BudgetTracker.debug.xcconfig"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* BudgetTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgetTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = BudgetTracker/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = BudgetTracker/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = BudgetTracker/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BudgetTracker/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = BudgetTracker/main.m; sourceTree = "<group>"; };
-		1683E4DC51CBB45CA75C44C0 /* libPods-BudgetTracker-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BudgetTracker-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		26D4C87B358225DC49CFE440 /* Pods-BudgetTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudgetTracker.release.xcconfig"; path = "Target Support Files/Pods-BudgetTracker/Pods-BudgetTracker.release.xcconfig"; sourceTree = "<group>"; };
-		29506FFBE2558AD774C577F7 /* Pods-BudgetTracker-BudgetTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudgetTracker-BudgetTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-BudgetTracker-BudgetTrackerTests/Pods-BudgetTracker-BudgetTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2C80C0EDD9DB44F3835F2ED0 /* libPods-BudgetTracker-BudgetTrackerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BudgetTracker-BudgetTrackerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E47B1E0B4A5D006451C7 /* BudgetTracker-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BudgetTracker-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* BudgetTracker-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BudgetTracker-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F21AD99517003FC87E /* WeatherForecastingAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherForecastingAppTests.m; sourceTree = "<group>"; };
+		130D80E05A3765B5127793E2 /* Pods-WeatherForecastingApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherForecastingApp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-WeatherForecastingApp-tvOSTests/Pods-WeatherForecastingApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		136DF393FA5AD90BCF461AA4 /* Pods-WeatherForecastingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherForecastingApp.debug.xcconfig"; path = "Target Support Files/Pods-WeatherForecastingApp/Pods-WeatherForecastingApp.debug.xcconfig"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* WeatherForecastingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherForecastingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = WeatherForecastingApp/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = WeatherForecastingApp/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = WeatherForecastingApp/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = WeatherForecastingApp/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = WeatherForecastingApp/main.m; sourceTree = "<group>"; };
+		1683E4DC51CBB45CA75C44C0 /* libPods-WeatherForecastingApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeatherForecastingApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		26D4C87B358225DC49CFE440 /* Pods-WeatherForecastingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherForecastingApp.release.xcconfig"; path = "Target Support Files/Pods-WeatherForecastingApp/Pods-WeatherForecastingApp.release.xcconfig"; sourceTree = "<group>"; };
+		29506FFBE2558AD774C577F7 /* Pods-WeatherForecastingApp-WeatherForecastingAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherForecastingApp-WeatherForecastingAppTests.debug.xcconfig"; path = "Target Support Files/Pods-WeatherForecastingApp-WeatherForecastingAppTests/Pods-WeatherForecastingApp-WeatherForecastingAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2C80C0EDD9DB44F3835F2ED0 /* libPods-WeatherForecastingApp-WeatherForecastingAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeatherForecastingApp-WeatherForecastingAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E47B1E0B4A5D006451C7 /* WeatherForecastingApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeatherForecastingApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* WeatherForecastingApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WeatherForecastingApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD62D28261F47D100FA3606 /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		2DD62D29261F47D100FA3606 /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		2DD62D2A261F47D100FA3606 /* AntDesign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
@@ -74,13 +74,13 @@
 		2DD62D35261F47D100FA3606 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		2DD62D36261F47D100FA3606 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		2DD62D37261F47D100FA3606 /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
-		4368937257899934F20CEB75 /* libPods-BudgetTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BudgetTracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7971A12AE4950C6FF5A88FF1 /* Pods-BudgetTracker-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudgetTracker-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-BudgetTracker-tvOSTests/Pods-BudgetTracker-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = BudgetTracker/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BF49A248D107F1E25AEFFCA7 /* Pods-BudgetTracker-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudgetTracker-tvOS.release.xcconfig"; path = "Target Support Files/Pods-BudgetTracker-tvOS/Pods-BudgetTracker-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		C663A32E9990E9F66D337293 /* libPods-BudgetTracker-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BudgetTracker-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA0B49DE5038BB6183158712 /* Pods-BudgetTracker-BudgetTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudgetTracker-BudgetTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-BudgetTracker-BudgetTrackerTests/Pods-BudgetTracker-BudgetTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
-		D41D36C06C326504CEEE2D72 /* Pods-BudgetTracker-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudgetTracker-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-BudgetTracker-tvOS/Pods-BudgetTracker-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		4368937257899934F20CEB75 /* libPods-WeatherForecastingApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeatherForecastingApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7971A12AE4950C6FF5A88FF1 /* Pods-WeatherForecastingApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherForecastingApp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-WeatherForecastingApp-tvOSTests/Pods-WeatherForecastingApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = WeatherForecastingApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF49A248D107F1E25AEFFCA7 /* Pods-WeatherForecastingApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherForecastingApp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-WeatherForecastingApp-tvOS/Pods-WeatherForecastingApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		C663A32E9990E9F66D337293 /* libPods-WeatherForecastingApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeatherForecastingApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0B49DE5038BB6183158712 /* Pods-WeatherForecastingApp-WeatherForecastingAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherForecastingApp-WeatherForecastingAppTests.release.xcconfig"; path = "Target Support Files/Pods-WeatherForecastingApp-WeatherForecastingAppTests/Pods-WeatherForecastingApp-WeatherForecastingAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		D41D36C06C326504CEEE2D72 /* Pods-WeatherForecastingApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherForecastingApp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-WeatherForecastingApp-tvOS/Pods-WeatherForecastingApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6D6EE95F718730915A6EE39 /* libPods-BudgetTracker-BudgetTrackerTests.a in Frameworks */,
+				C6D6EE95F718730915A6EE39 /* libPods-WeatherForecastingApp-WeatherForecastingAppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDEE9FA14459E3F61D0BF72B /* libPods-BudgetTracker.a in Frameworks */,
+				EDEE9FA14459E3F61D0BF72B /* libPods-WeatherForecastingApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6B4E8BDFB163891467462B8 /* libPods-BudgetTracker-tvOS.a in Frameworks */,
+				E6B4E8BDFB163891467462B8 /* libPods-WeatherForecastingApp-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,20 +114,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0664E89972BC6E8A78579F0F /* libPods-BudgetTracker-tvOSTests.a in Frameworks */,
+				0664E89972BC6E8A78579F0F /* libPods-WeatherForecastingApp-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* BudgetTrackerTests */ = {
+		00E356EF1AD99517003FC87E /* WeatherForecastingAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* BudgetTrackerTests.m */,
+				00E356F21AD99517003FC87E /* WeatherForecastingAppTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = BudgetTrackerTests;
+			path = WeatherForecastingAppTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -138,7 +138,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* BudgetTracker */ = {
+		13B07FAE1A68108700A75B9A /* WeatherForecastingApp */ = {
 			isa = PBXGroup;
 			children = (
 				2DD62D1F261F476100FA3606 /* Fonts */,
@@ -150,7 +150,7 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = BudgetTracker;
+			name = WeatherForecastingApp;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -158,10 +158,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				4368937257899934F20CEB75 /* libPods-BudgetTracker.a */,
-				2C80C0EDD9DB44F3835F2ED0 /* libPods-BudgetTracker-BudgetTrackerTests.a */,
-				C663A32E9990E9F66D337293 /* libPods-BudgetTracker-tvOS.a */,
-				1683E4DC51CBB45CA75C44C0 /* libPods-BudgetTracker-tvOSTests.a */,
+				4368937257899934F20CEB75 /* libPods-WeatherForecastingApp.a */,
+				2C80C0EDD9DB44F3835F2ED0 /* libPods-WeatherForecastingApp-WeatherForecastingAppTests.a */,
+				C663A32E9990E9F66D337293 /* libPods-WeatherForecastingApp-tvOS.a */,
+				1683E4DC51CBB45CA75C44C0 /* libPods-WeatherForecastingApp-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -192,14 +192,14 @@
 		7CA2D5D327F4F52ED73C51D3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				136DF393FA5AD90BCF461AA4 /* Pods-BudgetTracker.debug.xcconfig */,
-				26D4C87B358225DC49CFE440 /* Pods-BudgetTracker.release.xcconfig */,
-				29506FFBE2558AD774C577F7 /* Pods-BudgetTracker-BudgetTrackerTests.debug.xcconfig */,
-				CA0B49DE5038BB6183158712 /* Pods-BudgetTracker-BudgetTrackerTests.release.xcconfig */,
-				D41D36C06C326504CEEE2D72 /* Pods-BudgetTracker-tvOS.debug.xcconfig */,
-				BF49A248D107F1E25AEFFCA7 /* Pods-BudgetTracker-tvOS.release.xcconfig */,
-				130D80E05A3765B5127793E2 /* Pods-BudgetTracker-tvOSTests.debug.xcconfig */,
-				7971A12AE4950C6FF5A88FF1 /* Pods-BudgetTracker-tvOSTests.release.xcconfig */,
+				136DF393FA5AD90BCF461AA4 /* Pods-WeatherForecastingApp.debug.xcconfig */,
+				26D4C87B358225DC49CFE440 /* Pods-WeatherForecastingApp.release.xcconfig */,
+				29506FFBE2558AD774C577F7 /* Pods-WeatherForecastingApp-WeatherForecastingAppTests.debug.xcconfig */,
+				CA0B49DE5038BB6183158712 /* Pods-WeatherForecastingApp-WeatherForecastingAppTests.release.xcconfig */,
+				D41D36C06C326504CEEE2D72 /* Pods-WeatherForecastingApp-tvOS.debug.xcconfig */,
+				BF49A248D107F1E25AEFFCA7 /* Pods-WeatherForecastingApp-tvOS.release.xcconfig */,
+				130D80E05A3765B5127793E2 /* Pods-WeatherForecastingApp-tvOSTests.debug.xcconfig */,
+				7971A12AE4950C6FF5A88FF1 /* Pods-WeatherForecastingApp-tvOSTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -214,9 +214,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* BudgetTracker */,
+				13B07FAE1A68108700A75B9A /* WeatherForecastingApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* BudgetTrackerTests */,
+				00E356EF1AD99517003FC87E /* WeatherForecastingAppTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				7CA2D5D327F4F52ED73C51D3 /* Pods */,
@@ -229,10 +229,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* BudgetTracker.app */,
-				00E356EE1AD99517003FC87E /* BudgetTrackerTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* BudgetTracker-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* BudgetTracker-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* WeatherForecastingApp.app */,
+				00E356EE1AD99517003FC87E /* WeatherForecastingAppTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* WeatherForecastingApp-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* WeatherForecastingApp-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -240,9 +240,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* BudgetTrackerTests */ = {
+		00E356ED1AD99517003FC87E /* WeatherForecastingAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "BudgetTrackerTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "WeatherForecastingAppTests" */;
 			buildPhases = (
 				606041E4824E68B329621320 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -255,14 +255,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = BudgetTrackerTests;
-			productName = BudgetTrackerTests;
-			productReference = 00E356EE1AD99517003FC87E /* BudgetTrackerTests.xctest */;
+			name = WeatherForecastingAppTests;
+			productName = WeatherForecastingAppTests;
+			productReference = 00E356EE1AD99517003FC87E /* WeatherForecastingAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* BudgetTracker */ = {
+		13B07F861A680F5B00A75B9A /* WeatherForecastingApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "BudgetTracker" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "WeatherForecastingApp" */;
 			buildPhases = (
 				2D09DD9E3E7B661708DA14C5 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -276,14 +276,14 @@
 			);
 			dependencies = (
 			);
-			name = BudgetTracker;
-			productName = BudgetTracker;
-			productReference = 13B07F961A680F5B00A75B9A /* BudgetTracker.app */;
+			name = WeatherForecastingApp;
+			productName = WeatherForecastingApp;
+			productReference = 13B07F961A680F5B00A75B9A /* WeatherForecastingApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* BudgetTracker-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* WeatherForecastingApp-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "BudgetTracker-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "WeatherForecastingApp-tvOS" */;
 			buildPhases = (
 				17A29BC1EDC642BA1A815B14 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -296,14 +296,14 @@
 			);
 			dependencies = (
 			);
-			name = "BudgetTracker-tvOS";
-			productName = "BudgetTracker-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* BudgetTracker-tvOS.app */;
+			name = "WeatherForecastingApp-tvOS";
+			productName = "WeatherForecastingApp-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* WeatherForecastingApp-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* BudgetTracker-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* WeatherForecastingApp-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "BudgetTracker-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "WeatherForecastingApp-tvOSTests" */;
 			buildPhases = (
 				5C9C74E97B4866DD2806D035 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -315,9 +315,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "BudgetTracker-tvOSTests";
-			productName = "BudgetTracker-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* BudgetTracker-tvOSTests.xctest */;
+			name = "WeatherForecastingApp-tvOSTests";
+			productName = "WeatherForecastingApp-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* WeatherForecastingApp-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -346,7 +346,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "BudgetTracker" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "WeatherForecastingApp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -359,10 +359,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* BudgetTracker */,
-				00E356ED1AD99517003FC87E /* BudgetTrackerTests */,
-				2D02E47A1E0B4A5D006451C7 /* BudgetTracker-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* BudgetTracker-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* WeatherForecastingApp */,
+				00E356ED1AD99517003FC87E /* WeatherForecastingAppTests */,
+				2D02E47A1E0B4A5D006451C7 /* WeatherForecastingApp-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* WeatherForecastingApp-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -422,7 +422,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BudgetTracker/Pods-BudgetTracker-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-WeatherForecastingApp/Pods-WeatherForecastingApp-resources.sh",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -463,7 +463,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BudgetTracker/Pods-BudgetTracker-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeatherForecastingApp/Pods-WeatherForecastingApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		17A29BC1EDC642BA1A815B14 /* [CP] Check Pods Manifest.lock */ = {
@@ -481,7 +481,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BudgetTracker-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-WeatherForecastingApp-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -517,7 +517,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BudgetTracker-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-WeatherForecastingApp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -539,7 +539,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BudgetTracker-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-WeatherForecastingApp-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -561,7 +561,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BudgetTracker-BudgetTrackerTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-WeatherForecastingApp-WeatherForecastingAppTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -574,7 +574,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BudgetTracker-BudgetTrackerTests/Pods-BudgetTracker-BudgetTrackerTests-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-WeatherForecastingApp-WeatherForecastingAppTests/Pods-WeatherForecastingApp-WeatherForecastingAppTests-resources.sh",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -615,7 +615,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BudgetTracker-BudgetTrackerTests/Pods-BudgetTracker-BudgetTrackerTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeatherForecastingApp-WeatherForecastingAppTests/Pods-WeatherForecastingApp-WeatherForecastingAppTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -663,7 +663,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* BudgetTrackerTests.m in Sources */,
+				00E356F31AD99517003FC87E /* WeatherForecastingAppTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -689,7 +689,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* BudgetTrackerTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* WeatherForecastingAppTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,12 +698,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* BudgetTracker */;
+			target = 13B07F861A680F5B00A75B9A /* WeatherForecastingApp */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* BudgetTracker-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* WeatherForecastingApp-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -711,14 +711,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 29506FFBE2558AD774C577F7 /* Pods-BudgetTracker-BudgetTrackerTests.debug.xcconfig */;
+			baseConfigurationReference = 29506FFBE2558AD774C577F7 /* Pods-WeatherForecastingApp-WeatherForecastingAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = BudgetTrackerTests/Info.plist;
+				INFOPLIST_FILE = WeatherForecastingAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -728,17 +728,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BudgetTracker.app/BudgetTracker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherForecastingApp.app/WeatherForecastingApp";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA0B49DE5038BB6183158712 /* Pods-BudgetTracker-BudgetTrackerTests.release.xcconfig */;
+			baseConfigurationReference = CA0B49DE5038BB6183158712 /* Pods-WeatherForecastingApp-WeatherForecastingAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = BudgetTrackerTests/Info.plist;
+				INFOPLIST_FILE = WeatherForecastingAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -748,19 +748,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BudgetTracker.app/BudgetTracker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherForecastingApp.app/WeatherForecastingApp";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 136DF393FA5AD90BCF461AA4 /* Pods-BudgetTracker.debug.xcconfig */;
+			baseConfigurationReference = 136DF393FA5AD90BCF461AA4 /* Pods-WeatherForecastingApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = BudgetTracker/Info.plist;
+				INFOPLIST_FILE = WeatherForecastingApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -768,7 +768,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = BudgetTracker;
+				PRODUCT_NAME = WeatherForecastingApp;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -777,12 +777,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26D4C87B358225DC49CFE440 /* Pods-BudgetTracker.release.xcconfig */;
+			baseConfigurationReference = 26D4C87B358225DC49CFE440 /* Pods-WeatherForecastingApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = BudgetTracker/Info.plist;
+				INFOPLIST_FILE = WeatherForecastingApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -790,7 +790,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = BudgetTracker;
+				PRODUCT_NAME = WeatherForecastingApp;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -798,7 +798,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D41D36C06C326504CEEE2D72 /* Pods-BudgetTracker-tvOS.debug.xcconfig */;
+			baseConfigurationReference = D41D36C06C326504CEEE2D72 /* Pods-WeatherForecastingApp-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -809,14 +809,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "BudgetTracker-tvOS/Info.plist";
+				INFOPLIST_FILE = "WeatherForecastingApp-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.BudgetTracker-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.WeatherForecastingApp-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -826,7 +826,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF49A248D107F1E25AEFFCA7 /* Pods-BudgetTracker-tvOS.release.xcconfig */;
+			baseConfigurationReference = BF49A248D107F1E25AEFFCA7 /* Pods-WeatherForecastingApp-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -837,14 +837,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "BudgetTracker-tvOS/Info.plist";
+				INFOPLIST_FILE = "WeatherForecastingApp-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.BudgetTracker-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.WeatherForecastingApp-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -854,7 +854,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 130D80E05A3765B5127793E2 /* Pods-BudgetTracker-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 130D80E05A3765B5127793E2 /* Pods-WeatherForecastingApp-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -864,24 +864,24 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "BudgetTracker-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "WeatherForecastingApp-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.BudgetTracker-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.WeatherForecastingApp-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BudgetTracker-tvOS.app/BudgetTracker-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherForecastingApp-tvOS.app/WeatherForecastingApp-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7971A12AE4950C6FF5A88FF1 /* Pods-BudgetTracker-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 7971A12AE4950C6FF5A88FF1 /* Pods-WeatherForecastingApp-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -891,17 +891,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "BudgetTracker-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "WeatherForecastingApp-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.BudgetTracker-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.WeatherForecastingApp-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BudgetTracker-tvOS.app/BudgetTracker-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherForecastingApp-tvOS.app/WeatherForecastingApp-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -1022,7 +1022,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "BudgetTrackerTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "WeatherForecastingAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -1031,7 +1031,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "BudgetTracker" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "WeatherForecastingApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -1040,7 +1040,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "BudgetTracker-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "WeatherForecastingApp-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -1049,7 +1049,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "BudgetTracker-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "WeatherForecastingApp-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -1058,7 +1058,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "BudgetTracker" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "WeatherForecastingApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

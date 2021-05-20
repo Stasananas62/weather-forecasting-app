@@ -1,4 +1,4 @@
-package com.budgettracker;
+package com.weather.forecasting.app;
 
 import com.facebook.react.ReactActivity;
 

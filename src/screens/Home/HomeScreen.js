@@ -55,10 +55,3 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);
-
-
-
-// Colors
-// cloud '#ffb61b'
-// rain '#49cbee'
-// sun '#fa1111'

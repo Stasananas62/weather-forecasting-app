@@ -1,16 +1,16 @@
 import { types } from './types';
 
 export const initial = {
-    authorized: false
+    forecasting: []
 };
 
 export default (state = initial, action) => {
     switch (action.type) {
-        case types.LOG_IN_REQUEST: {
-            console.log('test')
+        case types.SET_WEATHER_FORECASTING: {
+            console.log('action.payload', action)
             return {
                 ...state,
-                authorized: false,
+                forecasting: action.payload,
             };
         }
         default:

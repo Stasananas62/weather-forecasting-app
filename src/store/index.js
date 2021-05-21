@@ -3,11 +3,11 @@ import {createStore, combineReducers} from "redux";
 import reducers from './redux';
 
 const {
-    transactionsReducer
+    forecastingReducer
 } = reducers;
 
 const rootReducer = combineReducers({
-    transactions: transactionsReducer,
+    weather: forecastingReducer,
 });
 
 export const store = createStore(rootReducer)

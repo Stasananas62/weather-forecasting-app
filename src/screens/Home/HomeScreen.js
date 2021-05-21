@@ -6,18 +6,27 @@ import {
 import connect from 'react-redux/lib/connect/connect';
 import TodayCard from '../../common/Home/TodayCard'
 import DaysScroll from '../../common/Home/DaysScroll'
+import { selectForecasting, selectForecastingByDateAndTime } from '../../store/selectors/forecasting';
+import { forecastingActions } from '../../store/redux/forecasting';
 
-const HomeScreen = ({navigation, dispatch}) => {
-    // fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${'London'}&appid=${'3f0faf81a417791411bb372d795c5f8e'}`, {
-    //     method: 'GET',
-    // }).then((res) => {
-    //     res.json().then( data => {
-    //         console.log(data)
-    //     })
-    // }).catch(err => console.log(err));
+const HomeScreen = ({navigation, dispatch, forecastingByDateAndTime}) => {
+
+    const updateData = () => {
+        fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${'London'}&appid=${'3f0faf81a417791411bb372d795c5f8e'}`, {
+            method: 'GET',
+        }).then((res) => {
+            res.json().then( data => {
+                dispatch(forecastingActions.setWeatherForecasting(data.list))
+            })
+        }).catch(err => console.log(err));
+    }
+
+    let today = new Date().toJSON().slice(0,10).replace(/-/g,'-');
+
     return (
         <View style={styles.container}>
-            <TodayCard/>
+            {console.log('forecastingByDateAndTime', forecastingByDateAndTime)}
+            <TodayCard onPress={updateData} item={forecastingByDateAndTime[today]}/>
             <DaysScroll/>
         </View>
     );
@@ -37,7 +46,8 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = (state) => ({
-    transactions: state.transactions
+    selectForecasting: selectForecasting(state),
+    forecastingByDateAndTime: selectForecastingByDateAndTime(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import {
     View,
     StyleSheet,
@@ -6,7 +6,7 @@ import {
     TouchableOpacity, Image
 } from 'react-native';
 
-const TodayCard = ({ onChange, containerStyle }) => {
+const TodayCard = ({ onPress, containerStyle, item }) => {
     const {
         headerContainer,
         secondaryTextStyle,
@@ -18,30 +18,42 @@ const TodayCard = ({ onChange, containerStyle }) => {
         boldTextStyle
     } = styles
 
+    const actualTimeItem = item[Object.keys(item)[0]]
+
+    const weather = useMemo(() => {
+        return actualTimeItem.weather[0];
+    }, [actualTimeItem]);
+
+
+    const celsius = Math.round(actualTimeItem?.main?.temp - 273.15);
+
+    // let fahrenheit = Math.floor(celsius * (9/5) + 32);
+
     return (
         <>
             <View style={headerContainer}>
+                {console.log('item', item, item[Object.keys(item)[0]])}
                 <Text style={secondaryTextStyle}>
                     Today
                 </Text>
             </View>
-            <TouchableOpacity style={[container, containerStyle]} onPress={onChange}>
+            <TouchableOpacity style={[container, containerStyle]} onPress={onPress}>
                 <View style={row}>
                     <Image
                         style={{width: 100, height: 100}}
                         source={{
-                            uri: `http://openweathermap.org/img/w/${"04d"}.png`,
+                            uri: `http://openweathermap.org/img/w/${weather?.icon}.png`,
                         }}
                     />
                     <Text style={[textStyle, bigTextStyle]}>
-                        15˚
+                        {celsius}˚
                     </Text>
                 </View>
                 <Text style={[textStyle, middleTextStyle]}>
-                    Clouds
+                    {weather?.main}
                 </Text>
                 <Text style={[textStyle, middleTextStyle, boldTextStyle]}>
-                    Humidity
+                    {weather?.description}
                 </Text>
             </TouchableOpacity>
         </>

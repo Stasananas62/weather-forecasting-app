@@ -1,6 +1,5 @@
-import { authReducer } from './auth';
-import { transactionsReducer } from './transactions';
+import { forecastingReducer } from './forecasting';
 
 export default {
-    transactionsReducer,
+    forecastingReducer,
 };

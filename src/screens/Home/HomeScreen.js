@@ -27,7 +27,7 @@ const HomeScreen = ({navigation, dispatch, forecastingByDateAndTime}) => {
         <View style={styles.container}>
             {console.log('forecastingByDateAndTime', forecastingByDateAndTime)}
             <TodayCard onPress={updateData} item={forecastingByDateAndTime[today]}/>
-            <DaysScroll/>
+            <DaysScroll data={forecastingByDateAndTime}/>
         </View>
     );
 };

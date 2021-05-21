@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import {
     View,
-    StyleSheet, Image, Text, TouchableOpacity,
+    StyleSheet,
+    Image,
+    Text,
 } from 'react-native';
+import useCelsius from '../core/utils/hooks/useCelsius';
+import useWeatherCardBackgroundColor from '../core/utils/hooks/useWeatherCardBackgroundColor';
 
-const DaysCard = () => {
+const DaysCard = ({ item }) => {
     const {
         row,
         container,
@@ -15,30 +19,57 @@ const DaysCard = () => {
         bottomTextContainer,
         secondaryTextStyle
     } = styles
+
+    const actualTimeItem = useMemo(() => {
+        return item && item[Object.keys(item)[0]]; // TODO: Select nearest time
+    }, [item]);
+
+    const weather = useMemo(() => {
+        return actualTimeItem?.weather[0];
+    }, [actualTimeItem]);
+
+    const celsius = useCelsius(actualTimeItem?.main?.temp)
+
+    const backgroundColor = useWeatherCardBackgroundColor(weather?.main)
+
+    let itemDate = actualTimeItem?.dt_txt?.split(' ')[0]
+    let itemTime = actualTimeItem?.dt_txt?.split(' ')[1]
+    const  d = new Date(itemDate);
+    let weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+
     return (
-            <View style={container} >
+            <View style={[container, {backgroundColor}]} >
                 <View>
                     <Text style={[textStyle, middleTextStyle]}>
-                        12:00
+                        {itemTime.slice(0,5)}
                     </Text>
                     <Text style={[textStyle, middleTextStyle, boldTextStyle]}>
-                        Wednesday
+                        {weekday[d.getDay()]}
                     </Text>
                     <Image
                         style={{width: 50, height: 50}}
                         source={{
-                            uri: `http://openweathermap.org/img/w/${"04d"}.png`,
+                            uri: `http://openweathermap.org/img/w/${weather?.icon}.png`,
                         }}
                     />
                     <Text style={[textStyle, bigTextStyle]}>
-                        15˚
+                        {celsius}˚
                     </Text>
                     <View style={[row, bottomTextContainer]}>
+                        {/*TODO: here should be lower number for a day*/}
                         <Text style={[secondaryTextStyle]}>
-                            3˚
+                            {celsius}˚
                         </Text>
+                        {/*TODO: here should be highest number for a day*/}
                         <Text style={[textStyle]}>
-                            15˚
+                            {celsius}˚
                         </Text>
                     </View>
                 </View>
@@ -52,7 +83,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         height: 200,
-        backgroundColor: '#ffb61b',
         borderRadius: 20,
         marginRight: 20,
         shadowColor: '#000',

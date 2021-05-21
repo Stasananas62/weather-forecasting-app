@@ -7,21 +7,20 @@ import {
 } from 'react-native';
 import DayCard from '../DayCard'
 
-const DaysScroll = () => {
-    const { headerContainer, container, textStyle } = styles
+const DaysScroll = ({data}) => {
+    const { container, headerContainer, textStyle } = styles
+
     return (
         <>
-            <View style={headerContainer}>
+            <View style={[container, headerContainer]}>
                 <Text style={textStyle}>
                     Next 5 Days
                 </Text>
             </View>
             <ScrollView horizontal>
-                <DayCard/>
-                <DayCard/>
-                <DayCard/>
-                <DayCard/>
-                <DayCard/>
+                {Object.values(data).slice(1).map(item => {
+                    return <DayCard item={item}/>
+                })}
             </ScrollView>
         </>
     );
@@ -30,9 +29,6 @@ const DaysScroll = () => {
 const styles = StyleSheet.create({
     container: {
         width: '100%',
-        height: 300,
-        borderRadius: 20,
-        marginVertical: 50,
     },
     headerContainer: {
         width: '100%',

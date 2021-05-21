@@ -6,6 +6,7 @@ import {
     TouchableOpacity, Image
 } from 'react-native';
 import useWeatherCardBackgroundColor from '../../core/utils/hooks/useWeatherCardBackgroundColor';
+import useCelsius from "../../core/utils/hooks/useCelsius";
 
 const TodayCard = ({ onPress, containerStyle, item }) => {
     const {
@@ -20,17 +21,14 @@ const TodayCard = ({ onPress, containerStyle, item }) => {
     } = styles
 
     const actualTimeItem = useMemo(() => {
-        return item && item[Object.keys(item)[0]];
+        return item && item[Object.keys(item)[0]]; // TODO: Select nearest time
     }, [item]);
 
     const weather = useMemo(() => {
         return actualTimeItem?.weather[0];
     }, [actualTimeItem]);
 
-    const celsius = useMemo(() => {
-        return Math.round(actualTimeItem?.main?.temp - 273.15);
-        // let fahrenheit = Math.floor(celsius * (9/5) + 32);
-    }, [actualTimeItem]);
+    const celsius = useCelsius(actualTimeItem?.main?.temp)
 
     const backgroundColor = useWeatherCardBackgroundColor(weather?.main)
 

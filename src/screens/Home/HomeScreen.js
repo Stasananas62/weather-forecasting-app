@@ -2,16 +2,19 @@ import React, { useCallback, useState }  from 'react';
 import {
     View,
     StyleSheet,
-    Text,
-    TouchableOpacity,
-    Image
 } from 'react-native';
 import connect from 'react-redux/lib/connect/connect';
 import TodayCard from '../../common/Home/TodayCard'
-import DaysScroll from '../../common/Home/TodayCard'
+import DaysScroll from '../../common/Home/DaysScroll'
 
 const HomeScreen = ({navigation, dispatch}) => {
-
+    // fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${'London'}&appid=${'3f0faf81a417791411bb372d795c5f8e'}`, {
+    //     method: 'GET',
+    // }).then((res) => {
+    //     res.json().then( data => {
+    //         console.log(data)
+    //     })
+    // }).catch(err => console.log(err));
     return (
         <View style={styles.container}>
             <TodayCard/>

@@ -1,41 +1,50 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
     View,
-    TextInput,
     StyleSheet,
     Text,
     TouchableOpacity, Image
 } from 'react-native';
 
 const TodayCard = ({ onChange, containerStyle }) => {
-    const {headerCenter, secondaryTextStyle, row, container, textStyle, bigTextStyle, middleTextStyle, boldTextStyle} = styles
+    const {
+        headerContainer,
+        secondaryTextStyle,
+        row,
+        container,
+        textStyle,
+        bigTextStyle,
+        middleTextStyle,
+        boldTextStyle
+    } = styles
+
     return (
         <>
-            <View style={headerCenter}>
+            <View style={headerContainer}>
                 <Text style={secondaryTextStyle}>
                     Today
                 </Text>
             </View>
-        <TouchableOpacity style={[container, containerStyle]} onPress={onChange}>
-            <View style={row}>
-                <Image
-                    style={{width: 100, height: 100}}
-                    source={{
-                        uri: `http://openweathermap.org/img/w/${"04d"}.png`,
-                    }}
-                />
-                <Text style={[textStyle, bigTextStyle]}>
-                    15˚
+            <TouchableOpacity style={[container, containerStyle]} onPress={onChange}>
+                <View style={row}>
+                    <Image
+                        style={{width: 100, height: 100}}
+                        source={{
+                            uri: `http://openweathermap.org/img/w/${"04d"}.png`,
+                        }}
+                    />
+                    <Text style={[textStyle, bigTextStyle]}>
+                        15˚
+                    </Text>
+                </View>
+                <Text style={[textStyle, middleTextStyle]}>
+                    Clouds
                 </Text>
-            </View>
-            <Text style={[textStyle, middleTextStyle]}>
-                Clouds
-            </Text>
-            <Text style={[textStyle, middleTextStyle, boldTextStyle]}>
-                Humidity
-            </Text>
-        </TouchableOpacity>
-            </>
+                <Text style={[textStyle, middleTextStyle, boldTextStyle]}>
+                    Humidity
+                </Text>
+            </TouchableOpacity>
+        </>
     );
 };
 
@@ -47,8 +56,17 @@ const styles = StyleSheet.create({
         height: 300,
         backgroundColor: '#ffb61b',
         borderRadius: 20,
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 6,
+        },
+        shadowOpacity: 0.37,
+        shadowRadius: 7.49,
+
+        elevation: 12,
     },
-    headerCenter: {
+    headerContainer: {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'rgba(144, 167, 196, 0.1)',
@@ -71,10 +89,10 @@ const styles = StyleSheet.create({
         fontSize: 30,
     },
     boldTextStyle: {
-        fontWeight: "bold"
+        fontWeight: 'bold',
     },
     row: {
-        flexDirection: 'row'
+        flexDirection: 'row',
     }
 });
 

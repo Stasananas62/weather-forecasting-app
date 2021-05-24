@@ -1,4 +1,4 @@
-import React, { useCallback, useState }  from 'react';
+import React, { useEffect, useMemo } from 'react';
 import {
     View,
     StyleSheet,
@@ -9,7 +9,7 @@ import DaysScroll from '../../common/Home/DaysScroll'
 import { selectForecasting, selectForecastingByDateAndTime } from '../../store/selectors/forecasting';
 import { forecastingActions } from '../../store/redux/forecasting';
 
-const HomeScreen = ({navigation, dispatch, forecastingByDateAndTime}) => {
+const HomeScreen = ({ dispatch, forecastingByDateAndTime}) => {
 
     const updateData = () => {
         fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${'London'}&appid=${'3f0faf81a417791411bb372d795c5f8e'}`, {
@@ -21,7 +21,13 @@ const HomeScreen = ({navigation, dispatch, forecastingByDateAndTime}) => {
         }).catch(err => console.log(err));
     }
 
-    let today = new Date().toJSON().slice(0,10).replace(/-/g,'-');
+    useEffect(() => {
+        updateData()
+        let interval = setInterval(() => updateData(), 3600000);
+            return () => clearInterval(interval)
+        }, [dispatch])
+
+    let today = useMemo(() => new Date().toJSON().slice(0,10).replace(/-/g,'-'), [])
 
     return (
         <View style={styles.container}>

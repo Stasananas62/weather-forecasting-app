@@ -19,7 +19,7 @@ const DaysScroll = ({data}) => {
             </View>
             <ScrollView horizontal>
                 {Object.values(data).slice(1).map(item => {
-                    return <DayCard item={item}/>
+                    return <DayCard key={item[Object.keys(item)[0]].dt} item={item}/>
                 })}
             </ScrollView>
         </>

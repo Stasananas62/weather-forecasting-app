@@ -5,8 +5,8 @@ import {
     Image,
     Text,
 } from 'react-native';
-import useCelsius from '../core/utils/hooks/useCelsius';
-import useWeatherCardBackgroundColor from '../core/utils/hooks/useWeatherCardBackgroundColor';
+
+import { getCelsius, getWeatherCardBackgroundColor } from '../core/utils/common';
 
 const DaysCard = ({ item }) => {
     const {
@@ -20,56 +20,67 @@ const DaysCard = ({ item }) => {
         secondaryTextStyle
     } = styles
 
-    const actualTimeItem = useMemo(() => {
-        return item && item[Object.keys(item)[0]]; // TODO: Select nearest time
+    const forecast = useMemo(() => {
+       let middleTimeItem = item[Object.keys(item)[4]] || item[Object.keys(item)[2]] || item[Object.keys(item)[0]]
+       let morningTimeItem = item[Object.keys(item)[1]] || item[Object.keys(item)[0]]
+       let eveningTimeItem = item[Object.keys(item)[[Object.keys(item).length - 1]]]
+
+        const celsius = getCelsius(middleTimeItem?.main?.temp)
+        const morningCelsius = getCelsius(morningTimeItem?.main?.temp)
+        const eveningCelsius = getCelsius(eveningTimeItem?.main?.temp)
+
+        const backgroundColor = getWeatherCardBackgroundColor(middleTimeItem?.weather[0]?.main)
+
+        let itemDate = middleTimeItem?.dt_txt?.split(' ')[0]
+        let itemTime = middleTimeItem?.dt_txt?.split(' ')[1]
+
+        const  d = new Date(itemDate);
+        let weekday = new Array(7);
+        weekday[0] = "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tuesday";
+        weekday[3] = "Wednesday";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";
+
+        return {
+            icon: middleTimeItem?.weather[0].icon,
+            backgroundColor,
+            weekday: weekday[d.getDay()],
+            time: itemTime.slice(0,5),
+            middle: celsius,
+            morning: morningCelsius,
+            evening: eveningCelsius,
+        }
     }, [item]);
 
-    const weather = useMemo(() => {
-        return actualTimeItem?.weather[0];
-    }, [actualTimeItem]);
 
-    const celsius = useCelsius(actualTimeItem?.main?.temp)
-
-    const backgroundColor = useWeatherCardBackgroundColor(weather?.main)
-
-    let itemDate = actualTimeItem?.dt_txt?.split(' ')[0]
-    let itemTime = actualTimeItem?.dt_txt?.split(' ')[1]
-    const  d = new Date(itemDate);
-    let weekday = new Array(7);
-    weekday[0] = "Sunday";
-    weekday[1] = "Monday";
-    weekday[2] = "Tuesday";
-    weekday[3] = "Wednesday";
-    weekday[4] = "Thursday";
-    weekday[5] = "Friday";
-    weekday[6] = "Saturday";
 
     return (
-            <View style={[container, {backgroundColor}]} >
+            <View style={[container, {backgroundColor: forecast.backgroundColor}]} >
                 <View>
                     <Text style={[textStyle, middleTextStyle]}>
-                        {itemTime.slice(0,5)}
+                        {forecast.time}
                     </Text>
                     <Text style={[textStyle, middleTextStyle, boldTextStyle]}>
-                        {weekday[d.getDay()]}
+                        {forecast.weekday}
                     </Text>
                     <Image
                         style={{width: 50, height: 50}}
                         source={{
-                            uri: `http://openweathermap.org/img/w/${weather?.icon}.png`,
+                            uri: `http://openweathermap.org/img/w/${forecast.icon}.png`,
                         }}
                     />
                     <Text style={[textStyle, bigTextStyle]}>
-                        {celsius}˚
+                        {forecast.middle}˚
                     </Text>
                     <View style={[row, bottomTextContainer]}>
-                        {/*TODO: here should be lower number for a day*/}
                         <Text style={[secondaryTextStyle]}>
-                            {celsius}˚
+                            {forecast.morning}˚
                         </Text>
-                        {/*TODO: here should be highest number for a day*/}
                         <Text style={[textStyle]}>
-                            {celsius}˚
+                            {forecast.evening}˚
                         </Text>
                     </View>
                 </View>

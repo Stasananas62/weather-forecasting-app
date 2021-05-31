@@ -1,15 +1,15 @@
 import { types } from './types';
 
 export const initial = {
-    forecasting: []
+    city: '',
 };
 
 export default (state = initial, action) => {
     switch (action.type) {
-        case types.SET_WEATHER_FORECASTING: {
+        case types.SET_CITY: {
             return {
                 ...state,
-                forecasting: action.payload,
+                city: action.payload,
             };
         }
         default:

@@ -15,7 +15,7 @@ export const selectForecastingByDateAndTime = createSelector(
     (forecasting) => {
         let grouped = {}
 
-        forecasting.forEach(item => {
+        forecasting && forecasting.forEach(item => {
             let itemDate = item?.dt_txt?.split(' ')[0]
             let itemTime = item?.dt_txt?.split(' ')[1]
 

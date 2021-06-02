@@ -7,10 +7,9 @@ import connect from 'react-redux/lib/connect/connect';
 import TodayCard from '../../common/Home/TodayCard'
 import DaysScroll from '../../common/Home/DaysScroll'
 import { selectForecasting, selectForecastingByDateAndTime } from '../../store/selectors/forecasting';
-import { forecastingActions } from '../../store/redux/forecasting';
 import {selectCity} from "../../store/selectors/locations";
 
-const HomeScreen = ({ dispatch, forecastingByDateAndTime, route, city }) => {
+const HomeScreen = ({ forecastingByDateAndTime }) => {
 
     let today = useMemo(() => new Date().toJSON().slice(0,10).replace(/-/g,'-'), [])
 

@@ -1,14 +1,26 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useRef, useState } from 'react';
 import {
     View,
     StyleSheet,
     Text,
-    TouchableOpacity, Image
+    TouchableOpacity,
+    Image,
+    NativeModules,
+    ScrollView,
+    Animated,
+    Easing
 } from 'react-native';
 import useWeatherCardBackgroundColor from '../../core/utils/hooks/useWeatherCardBackgroundColor';
-import useCelsius from "../../core/utils/hooks/useCelsius";
+import useCelsius from '../../core/utils/hooks/useCelsius';
+import CloseButton from "./CloseButton";
+import WeatherByTImeScroll from "./WeatherByTimeScroll";
 
-const TodayCard = ({ onPress, containerStyle, item }) => {
+const { UIManager } = NativeModules;
+
+UIManager.setLayoutAnimationEnabledExperimental &&
+UIManager.setLayoutAnimationEnabledExperimental(true);
+
+const TodayCard = ({ item }) => {
     const {
         headerContainer,
         secondaryTextStyle,
@@ -17,8 +29,11 @@ const TodayCard = ({ onPress, containerStyle, item }) => {
         textStyle,
         bigTextStyle,
         middleTextStyle,
-        boldTextStyle
+        boldTextStyle,
+        internalContainer,
     } = styles
+
+    const [isOpen, setIsOpen] = useState(false);
 
     const actualTimeItem = useMemo(() => {
         return item && item[Object.keys(item)[0]]; // TODO: Select nearest time
@@ -32,14 +47,63 @@ const TodayCard = ({ onPress, containerStyle, item }) => {
 
     const backgroundColor = useWeatherCardBackgroundColor(weather?.main)
 
+    const Container = isOpen ? Animated.View : TouchableOpacity
+
+    const width = useRef(new Animated.Value(0)).current;
+    const height = useRef(new Animated.Value(0)).current;
+
+    const maxWidth = width.interpolate({
+        inputRange: [0, 1],
+        outputRange: ['100%', '110%']
+    })
+
+    const maxHeight = height.interpolate({
+        inputRange: [0, 1],
+        outputRange: ['40%', '100%']
+    })
+
+    const openCard = () => {
+        Animated.timing(height, {
+            toValue: 1,
+            duration: 300,
+            easing: Easing.linear,
+        }).start();
+        setIsOpen(true)
+        Animated.timing(width, {
+            toValue: 1,
+            duration: 300,
+            easing: Easing.linear,
+        }).start();
+        setIsOpen(true)
+    };
+
+    const closeCard = () => {
+        Animated.timing(height, {
+            toValue: 0,
+            duration: 300,
+            easing: Easing.linear,
+        }).start();
+        setIsOpen(false)
+        Animated.timing(width, {
+            toValue: 0,
+            duration: 300,
+            easing: Easing.linear,
+        }).start();
+        setIsOpen(false)
+    };
+
+
     return (
         <>
-            <View style={headerContainer}>
-                <Text style={secondaryTextStyle}>
-                    Today
+            <View style={[headerContainer, {backgroundColor: isOpen ? '#fff' : 'rgba(144, 167, 196, 0.1)'}]}>
+                 <Text style={secondaryTextStyle}>
+                     {isOpen || 'Today'}
                 </Text>
             </View>
-            <TouchableOpacity style={[container, containerStyle, {backgroundColor}]} onPress={onPress}>
+            {isOpen && <CloseButton onPress={closeCard}/>}
+            <Animated.View
+                style={[container, {backgroundColor, height: maxHeight, width: maxWidth}]}>
+                <Container  style={internalContainer} onPress={openCard}>
                 {actualTimeItem ?
                     <>
                         <View style={row}>
@@ -59,24 +123,26 @@ const TodayCard = ({ onPress, containerStyle, item }) => {
                         <Text style={[textStyle, middleTextStyle, boldTextStyle]}>
                             {weather?.description}
                         </Text>
+                        {isOpen &&
+                            <WeatherByTImeScroll item={item} />
+                        }
                     </>
                 :
                     <Text style={[textStyle, middleTextStyle, boldTextStyle]}>
                         Loading...
                     </Text>
                 }
-            </TouchableOpacity>
+                </Container>
+            </Animated.View>
         </>
     );
 };
 
 const styles = StyleSheet.create({
     container: {
-        width: '100%',
+        zIndex: 0,
         justifyContent: 'center',
         alignItems: 'center',
-        height: 300,
-        // backgroundColor: '#ffb61b',
         borderRadius: 20,
         shadowColor: '#000',
         shadowOffset: {
@@ -87,6 +153,12 @@ const styles = StyleSheet.create({
         shadowRadius: 7.49,
 
         elevation: 12,
+    },
+    internalContainer: {
+        width: '100%',
+        height: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     headerContainer: {
         justifyContent: 'center',
@@ -115,7 +187,7 @@ const styles = StyleSheet.create({
     },
     row: {
         flexDirection: 'row',
-    }
+    },
 });
 
 export default TodayCard;

@@ -11,8 +11,15 @@ import {locationsActions} from "../../store/redux/locations";
 import {forecastingActions} from "../../store/redux/forecasting";
 import {selectCity} from "../../store/selectors/locations";
 import SearchScreen from "../../screens/Modal/Search";
+import DayDetails from "../../screens/DayDetails";
+import {enableScreens} from "react-native-screens";
+import { createSharedElementStackNavigator } from "react-navigation-shared-element";
+import {NavigationContainer} from "@react-navigation/native";
 
-const Stack = createStackNavigator();
+// enableScreens();
+
+// const Stack = createStackNavigator();
+const Stack = createSharedElementStackNavigator();
 
 
 const AppNavigator = ({ dispatch, city }) => {
@@ -87,8 +94,14 @@ const AppNavigator = ({ dispatch, city }) => {
         );
     };
 
+    const forFade = ({ current }) => ({
+        cardStyle: {
+            opacity: current.progress,
+        },
+    });
+
     return (
-        <Stack.Navigator initialRouteName="Home">
+        <Stack.Navigator initialRouteName="HomeScreen">
             <Stack.Screen
                 name="HomeScreen"
                 component={HomeScreen}
@@ -108,8 +121,20 @@ const AppNavigator = ({ dispatch, city }) => {
                 component={SearchScreen}
                 options={{headerShown:false}}
             />
+            <Stack.Screen
+                name={'DayDetails'}
+                component={DayDetails}
+                options={{
+                    headerTitle:  <Text>{city}</Text>,
+                    headerLeft: null,
+                    cardStyleInterpolator: ({ current }) => ({
+                        cardStyle: {
+                            opacity: current.progress,
+                        },
+                    }),
+                }}
+            />
         </Stack.Navigator>
-
     );
 };
 

@@ -7,13 +7,14 @@ import {
 } from 'react-native';
 import {getCelsius} from "../../core/utils/common";
 
-const WeatherByTImeScroll = ({item}) => {
+const WeatherByTimeScroll = ({item, containerStyle}) => {
     const { container, headerContainer, textStyle, timeItemContainer } = styles
 
     return (
         <View
-            style={container}>
+            style={[container, containerStyle]}>
             <ScrollView
+                showsHorizontalScrollIndicator={false}
                 style={{ borderRadius: 20, paddingHorizontal: 16 }}
                 horizontal
             >
@@ -61,4 +62,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default WeatherByTImeScroll;
+export default WeatherByTimeScroll;

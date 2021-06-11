@@ -1,12 +1,15 @@
-import React, {useMemo} from 'react';
+import React, { useMemo } from 'react';
 import {
     View,
     StyleSheet,
     Image,
     Text,
+    TouchableOpacity,
 } from 'react-native';
 
 import { getCelsius, getWeatherCardBackgroundColor } from '../core/utils/common';
+import {useNavigation} from "@react-navigation/native";
+import { SharedElement } from "react-navigation-shared-element";
 
 const DaysCard = ({ item }) => {
     const {
@@ -17,7 +20,9 @@ const DaysCard = ({ item }) => {
         middleTextStyle,
         boldTextStyle,
         bottomTextContainer,
-        secondaryTextStyle
+        secondaryTextStyle,
+        internalContainer,
+        imageContainer,
     } = styles
 
     const forecast = useMemo(() => {
@@ -52,48 +57,75 @@ const DaysCard = ({ item }) => {
             middle: celsius,
             morning: morningCelsius,
             evening: eveningCelsius,
+            byTime: item
         }
     }, [item]);
 
+    const navigation = useNavigation();
 
+    const openDetail = () => {
+        navigation.navigate('DayDetails', { forecast })
+    }
 
-    return (
-            <View style={[container, {backgroundColor: forecast.backgroundColor}]} >
-                <View>
-                    <Text style={[textStyle, middleTextStyle]}>
-                        {forecast.time}
-                    </Text>
-                    <Text style={[textStyle, middleTextStyle, boldTextStyle]}>
-                        {forecast.weekday}
-                    </Text>
-                    <Image
-                        style={{width: 50, height: 50}}
-                        source={{
-                            uri: `http://openweathermap.org/img/w/${forecast.icon}.png`,
-                        }}
-                    />
-                    <Text style={[textStyle, bigTextStyle]}>
-                        {forecast.middle}˚
-                    </Text>
+    return (// justifyContent: 'center', alignItems: 'center',
+        <View>
+            <SharedElement id={`item.${forecast.weekday}.element`}>
+                <View
+                    style={[container,  { backgroundColor: forecast.backgroundColor }]}
+                />
+            </SharedElement>
+                <TouchableOpacity
+                            onPress={openDetail}
+                            style={internalContainer}
+                        >
+                    <SharedElement id={`item.${forecast.weekday}.time`}>
+                        <Text style={[textStyle, middleTextStyle]}>
+                            {forecast.time}
+                        </Text>
+                    </SharedElement>
+                    <SharedElement id={`item.${forecast.weekday}.weekday`}>
+                        <Text style={[textStyle, middleTextStyle, boldTextStyle]}>
+                            {forecast.weekday}
+                        </Text>
+                    </SharedElement>
+                    <SharedElement id={`item.${forecast.weekday}.Image`}>
+                        <Image
+                            style={imageContainer}
+                            source={{
+                                uri: `http://openweathermap.org/img/w/${forecast.icon}.png`,
+                            }}
+                        />
+                    </SharedElement>
+                    <SharedElement id={`item.${forecast.weekday}.temperature`}>
+                        <Text style={[textStyle, bigTextStyle, boldTextStyle]}>
+                            {forecast.middle}˚
+                        </Text>
+                    </SharedElement>
+                    <SharedElement id={`item.${forecast.weekday}.lowestTemperature`}>
                     <View style={[row, bottomTextContainer]}>
-                        <Text style={[secondaryTextStyle]}>
-                            {forecast.morning}˚
-                        </Text>
-                        <Text style={[textStyle]}>
-                            {forecast.evening}˚
-                        </Text>
+                        <SharedElement id={`item.${forecast.weekday}.morningTemperature`}>
+                            <Text style={secondaryTextStyle}>
+                                {forecast.morning}˚
+                            </Text>
+                        </SharedElement>
+                        <SharedElement id={`item.${forecast.weekday}.eveningTemperature`}>
+                            <Text style={textStyle}>
+                                {forecast.evening}˚
+                            </Text>
+                        </SharedElement>
                     </View>
-                </View>
+                    </SharedElement>
+                </TouchableOpacity>
             </View>
     );
 };
 
 const styles = StyleSheet.create({
     container: {
+        height: 200,
         width: 150,
         justifyContent: 'center',
         alignItems: 'center',
-        height: 200,
         borderRadius: 20,
         marginRight: 20,
         shadowColor: '#000',
@@ -105,6 +137,19 @@ const styles = StyleSheet.create({
         shadowRadius: 4.65,
 
         elevation: 8,
+    },
+    internalContainer: {
+        width: 150,
+        height: 200,
+        left: 0,
+        position: 'absolute',
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingHorizontal: 16,
+    },
+    imageContainer: {
+        width: 50,
+        height: 50
     },
     textStyle: {
         color: '#ffffff',
@@ -125,6 +170,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     bottomTextContainer: {
+        width: 150,
+        paddingHorizontal: 32,
         justifyContent: 'space-between'
     }
 });

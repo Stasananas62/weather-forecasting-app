@@ -5,11 +5,11 @@ import {
 } from 'react-native';
 import Cross from '../../assets/icons/Cross';
 
-const CloseButton = ({onPress}) => {
+const CloseButton = ({onPress, containerStyle}) => {
 
     return (
-        <TouchableOpacity style={styles.container} onPress={onPress}>
-            <Cross/>
+        <TouchableOpacity style={[styles.container, containerStyle]} onPress={onPress}>
+            <Cross />
         </TouchableOpacity>
     );
 };

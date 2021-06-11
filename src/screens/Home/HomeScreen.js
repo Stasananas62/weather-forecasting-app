@@ -1,7 +1,8 @@
-import React, { useEffect, useMemo } from 'react';
+import React, {useState, useMemo, useRef} from 'react';
 import {
     View,
-    StyleSheet
+    StyleSheet,
+    ScrollView, Animated, Easing
 } from 'react-native';
 import connect from 'react-redux/lib/connect/connect';
 import TodayCard from '../../common/Home/TodayCard'
@@ -10,13 +11,31 @@ import { selectForecasting, selectForecastingByDateAndTime } from '../../store/s
 import {selectCity} from "../../store/selectors/locations";
 
 const HomeScreen = ({ forecastingByDateAndTime }) => {
+    const [isOpen, setIsOpen] = useState(false)
 
     let today = useMemo(() => new Date().toJSON().slice(0,10).replace(/-/g,'-'), [])
+
+
+    const height = useRef(new Animated.Value(1)).current;
+
+    const maxHeight = height.interpolate({
+        inputRange: [0, 1],
+        outputRange: ['0%', '60%']
+    })
+
+    const openCard = (status) => {
+        setIsOpen(status)
+        Animated.timing(height, {
+            toValue: status ? 0 : 1,
+            duration: 300,
+            easing: Easing.linear,
+        }).start();
+    };
 
     return (
         <View style={styles.container}>
             <TodayCard item={forecastingByDateAndTime[today]}/>
-            <DaysScroll data={forecastingByDateAndTime}/>
+            <DaysScroll data={forecastingByDateAndTime} onOpen={openCard}/>
         </View>
     );
 };

@@ -12,8 +12,8 @@ import {
 } from 'react-native';
 import useWeatherCardBackgroundColor from '../../core/utils/hooks/useWeatherCardBackgroundColor';
 import useCelsius from '../../core/utils/hooks/useCelsius';
-import CloseButton from "./CloseButton";
-import WeatherByTImeScroll from "./WeatherByTimeScroll";
+import CloseButton from './CloseButton';
+import WeatherByTimeScroll from './WeatherByTimeScroll';
 
 const { UIManager } = NativeModules;
 
@@ -124,7 +124,7 @@ const TodayCard = ({ item }) => {
                             {weather?.description}
                         </Text>
                         {isOpen &&
-                            <WeatherByTImeScroll item={item} />
+                            <WeatherByTimeScroll item={item} />
                         }
                     </>
                 :

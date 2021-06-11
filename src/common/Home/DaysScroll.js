@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     View,
     StyleSheet,
@@ -7,8 +7,17 @@ import {
 } from 'react-native';
 import DayCard from '../DayCard'
 
-const DaysScroll = ({data}) => {
+const DaysScroll = ({ data, onOpen }) => {
     const { container, headerContainer, textStyle } = styles
+
+    const [isSelect, setIsSelect] = useState(false)
+
+    const MainContainer = isSelect ? View : ScrollView
+
+    const onPress = () => {
+        onOpen && onOpen()
+        setIsSelect(!isSelect)
+    }
 
     return (
         <>
@@ -17,9 +26,9 @@ const DaysScroll = ({data}) => {
                     Next 5 Days
                 </Text>
             </View>
-            <ScrollView horizontal>
+            <ScrollView horizontal scrollEnabled={!isSelect} style={{ overflow: 'visible' }}>
                 {Object.values(data).slice(1).map(item => {
-                    return <DayCard key={item[Object.keys(item)[0]].dt} item={item}/>
+                    return <DayCard key={item[Object.keys(item)[0]].dt} item={item} onOpen={onPress}/>
                 })}
             </ScrollView>
         </>

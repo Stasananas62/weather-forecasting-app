@@ -5,21 +5,19 @@ import {
     Text,
     ScrollView, Image
 } from 'react-native';
-import {getCelsius} from "../../core/utils/common";
+import { getCelsius } from '../../core/utils/common';
 
 const WeatherByTimeScroll = ({item, containerStyle}) => {
-    const { container, headerContainer, textStyle, timeItemContainer } = styles
+    const { container, textStyle, timeItemContainer } = styles
 
     return (
         <View
             style={[container, containerStyle]}>
             <ScrollView
                 showsHorizontalScrollIndicator={false}
-                style={{ borderRadius: 20, paddingHorizontal: 16 }}
                 horizontal
             >
                 {Object.entries(item).map(([key, value]) => {
-
                     const celsius = getCelsius(value?.main?.temp)
                    return(
                         <View style={timeItemContainer}>

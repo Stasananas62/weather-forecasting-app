@@ -1,30 +1,25 @@
-import React, {useState, useMemo, useRef, useEffect} from 'react';
+import React, { useRef, useEffect} from 'react';
 import {
     View,
     StyleSheet,
-    ScrollView,
     Animated,
-    Easing,
-    Text, TouchableOpacity, Image, Dimensions,
+    Text,
+    Image,
 } from 'react-native';
 
 import connect from 'react-redux/lib/connect/connect';
-import { selectForecasting, selectForecastingByDateAndTime } from '../../store/selectors/forecasting';
-import {selectCity} from "../../store/selectors/locations";
-import {SharedElement} from "react-navigation-shared-element";
-import CloseButton from "../../common/Home/CloseButton";
-import WeatherByTimeScroll from "../../common/Home/WeatherByTimeScroll";
+import { selectForecasting } from '../../store/selectors/forecasting';
+import {selectCity} from '../../store/selectors/locations';
+import {SharedElement} from 'react-navigation-shared-element';
+import CloseButton from '../../common/Home/CloseButton';
+import WeatherByTimeScroll from '../../common/Home/WeatherByTimeScroll';
 
 const DayDetails = ({route, navigation}) => {
     const {
         row,
         container,
-        textStyle,
-        bigTextStyle,
-        middleTextStyle,
         boldTextStyle,
         bottomTextContainer,
-        secondaryTextStyle,
         internalContainer,
         imageContainer,
         weekdayStyle,
@@ -37,73 +32,46 @@ const DayDetails = ({route, navigation}) => {
 
     const forecast = route.params.forecast
 
-    const width = useRef(new Animated.Value(0)).current;
-    const height = useRef(new Animated.Value(0)).current;
-    const fadeAnim = useRef(new Animated.Value(0)).current;
+    const ballAnimatedValue = useRef(new Animated.Value(0)).current;
+    const scrollAnimatedValue = useRef(new Animated.Value(0)).current;
 
-    const screenwidth = Dimensions.get('screen').width
-    const screenheight = Dimensions.get('screen').height
-
-    const maxWidth = width.interpolate({
-        inputRange: [0, 1],
-        outputRange: [150, screenwidth]
-    })
-
-    const maxHeight = height.interpolate({
-        inputRange: [0, 1],
-        outputRange: [200, screenheight]
-    })
-
-
-    const openCard = () => {
-        Animated.timing(height, {
-            toValue: 1,
-            duration: 300,
-            easing: Easing.linear,
-        }).start();
-        Animated.timing(width, {
-            toValue: 1,
-            duration: 300,
-            easing: Easing.linear,
-        }).start();
-    };
-
-    const closeCard = () => {
-        moveOut()
-        moveScrollOut()
-        Animated.timing(height, {
-            toValue: 0,
-            duration: 300,
-            easing: Easing.linear,
-        }).start();
-        Animated.timing(width, {
-            toValue: 0,
-            duration: 300,
-            easing: Easing.linear,
-        }).start();
-        navigation.goBack()
-    };
-
-    const fadeIn = () => {
-        Animated.timing(fadeAnim, {
-            toValue: 1,
-            duration: 1500
-        }).start();
-    };
-
-    const fadeOut = () => {
-        Animated.timing(fadeAnim, {
-            toValue: 0,
-            duration: 300
-        }).start();
-    };
     useEffect(()=>{
         moveIn()
         moveScrollIn()
     }, [])
 
-    const ballAnimatedValue = useRef(new Animated.Value(0)).current;
-    const scrollAnimatedValue = useRef(new Animated.Value(0)).current;
+    const yVal = ballAnimatedValue.interpolate({
+        inputRange: [0, 1],
+        outputRange: [-50, 5],
+    });
+
+    const animStyle = {
+        transform: [
+            {
+                translateY: yVal,
+            },
+        ],
+    };
+
+    const yScrollVal = scrollAnimatedValue.interpolate({
+        inputRange: [0, 1],
+        outputRange: [700, 100],
+    });
+
+    const animScrollStyle = {
+        transform: [
+            {
+                translateY: yScrollVal,
+            },
+        ],
+    };
+
+
+    const closeCard = () => {
+        moveOut()
+        moveScrollOut()
+        navigation.goBack()
+    };
 
     const moveIn = () => {
         Animated.timing(ballAnimatedValue, {
@@ -132,33 +100,6 @@ const DayDetails = ({route, navigation}) => {
             duration: 300,
             useNativeDriver: true,
         }).start();
-    };
-
-
-    const yVal = ballAnimatedValue.interpolate({
-        inputRange: [0, 1],
-        outputRange: [-50, 5],
-    });
-
-    const animStyle = {
-        transform: [
-            {
-                translateY: yVal,
-            },
-        ],
-    };
-
-    const yScrollVal = scrollAnimatedValue.interpolate({
-        inputRange: [0, 1],
-        outputRange: [700, 100],
-    });
-
-    const animScrollStyle = {
-        transform: [
-            {
-                translateY: yScrollVal,
-            },
-        ],
     };
 
     return (
@@ -250,18 +191,6 @@ const styles = StyleSheet.create({
         width: 200,
         height: 200,
     },
-    textStyle: {
-        color: '#ffffff',
-    },
-    secondaryTextStyle: {
-        color: 'rgba(255,255,255, 0.9)',
-    },
-    bigTextStyle: {
-        fontSize: 70,
-    },
-    middleTextStyle: {
-        fontSize: 25,
-    },
     boldTextStyle: {
         fontWeight: 'bold',
     },
@@ -269,7 +198,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         marginTop: 50,
         color: '#ffffff',
-        fontSize: 70,
+        fontSize: 50,
         alignSelf: 'center'
     },
     timeStyle: {

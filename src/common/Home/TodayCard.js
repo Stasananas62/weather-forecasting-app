@@ -6,7 +6,6 @@ import {
     TouchableOpacity,
     Image,
     NativeModules,
-    ScrollView,
     Animated,
     Easing
 } from 'react-native';
@@ -52,6 +51,38 @@ const TodayCard = ({ item }) => {
     const width = useRef(new Animated.Value(0)).current;
     const height = useRef(new Animated.Value(0)).current;
 
+    const ballAnimatedValue = useRef(new Animated.Value(0)).current;
+
+    const scrollAnimatedValue = useRef(new Animated.Value(0)).current;
+
+
+    const yVal = ballAnimatedValue.interpolate({
+        inputRange: [0, 1],
+        outputRange: [-50, 30],
+    });
+
+    const animStyle = {
+        transform: [
+            {
+                translateY: yVal,
+            },
+        ],
+    };
+
+    const yScrollVal = scrollAnimatedValue.interpolate({
+        inputRange: [0, 1],
+        outputRange: [700, 50],
+    });
+
+
+    const animScrollStyle = {
+        transform: [
+            {
+                translateY: yScrollVal,
+            },
+        ],
+    };
+
     const maxWidth = width.interpolate({
         inputRange: [0, 1],
         outputRange: ['100%', '110%']
@@ -75,6 +106,8 @@ const TodayCard = ({ item }) => {
             easing: Easing.linear,
         }).start();
         setIsOpen(true)
+        moveScrollIn()
+        moveIn()
     };
 
     const closeCard = () => {
@@ -90,8 +123,42 @@ const TodayCard = ({ item }) => {
             easing: Easing.linear,
         }).start();
         setIsOpen(false)
+        moveScrollOut()
+        moveOut()
     };
 
+
+    const moveIn = () => {
+        Animated.timing(ballAnimatedValue, {
+            toValue: 1,
+            duration: 300,
+            useNativeDriver: true,
+        }).start();
+    };
+
+    const moveOut = () => {
+        Animated.timing(ballAnimatedValue, {
+            toValue: 0,
+            duration: 300,
+            useNativeDriver: true,
+        }).start();
+    };
+
+    const moveScrollIn = () => {
+        Animated.timing(scrollAnimatedValue, {
+            toValue: 1,
+            duration: 300,
+            useNativeDriver: true,
+        }).start();
+    };
+
+    const moveScrollOut = () => {
+        Animated.timing(scrollAnimatedValue, {
+            toValue: 0,
+            duration: 300,
+            useNativeDriver: true,
+        }).start();
+    };
 
     return (
         <>
@@ -100,7 +167,9 @@ const TodayCard = ({ item }) => {
                      {isOpen || 'Today'}
                 </Text>
             </View>
-            {isOpen && <CloseButton onPress={closeCard}/>}
+            <Animated.View style={[animStyle, { zIndex: 1,}]}>
+                <CloseButton containerStyle={{alignSelf:'center',  position: 'absolute', marginTop: -50 }} onPress={closeCard}/>
+            </Animated.View>
             <Animated.View
                 style={[container, {backgroundColor, height: maxHeight, width: maxWidth}]}>
                 <Container  style={internalContainer} onPress={openCard}>
@@ -123,9 +192,9 @@ const TodayCard = ({ item }) => {
                         <Text style={[textStyle, middleTextStyle, boldTextStyle]}>
                             {weather?.description}
                         </Text>
-                        {isOpen &&
+                        <Animated.View  style={[animScrollStyle, { zIndex: 1,}]}>
                             <WeatherByTimeScroll item={item} />
-                        }
+                        </Animated.View>
                     </>
                 :
                     <Text style={[textStyle, middleTextStyle, boldTextStyle]}>
@@ -157,7 +226,8 @@ const styles = StyleSheet.create({
     internalContainer: {
         width: '100%',
         height: '100%',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
+        paddingTop: 30,
         alignItems: 'center',
     },
     headerContainer: {
